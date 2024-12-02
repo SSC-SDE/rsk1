@@ -11,3 +11,93 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block; 
+}
+
+.tooltip-button {
+  cursor: pointer;
+  padding: 10px 20px; 
+  font-size: 16px; 
+}
+
+.tooltip-box {
+  position: absolute;
+  background-color: black; 
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  z-index: 1000;
+  white-space: nowrap; 
+}
+
+.tooltip-top {
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0.5rem; 
+}
+
+.tooltip-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem; 
+}
+
+.tooltip-left {
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  margin-right: 0.5rem;
+}
+
+.tooltip-right {
+  top: 50%;
+  left: 100%; 
+  transform: translateY(-50%);
+  margin-left: 0.5rem;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.tooltip-top .tooltip-arrow {
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 5px solid black;
+}
+
+.tooltip-bottom .tooltip-arrow {
+  top: -5px; 
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 5px solid black; 
+}
+
+.tooltip-left .tooltip-arrow {
+  top: 50%;
+  right: -5px; 
+  transform: translateY(-50%);
+  border-left: 5px solid black; 
+}
+
+.tooltip-right .tooltip-arrow {
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%);
+  border-right: 5px solid black;
+}
